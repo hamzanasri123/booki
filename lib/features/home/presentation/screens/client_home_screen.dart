@@ -45,10 +45,10 @@ class ClientHomeScreen extends StatelessWidget {
             const SizedBox(height: 24),
             const SectionHeader(title: 'Catégories'),
             const SizedBox(height: 12),
-            Wrap(
+            const Wrap(
               spacing: 10,
               runSpacing: 10,
-              children: const [
+              children: [
                 _CategoryChip(label: 'Barber', icon: Icons.content_cut),
                 _CategoryChip(label: 'Beauté', icon: Icons.spa_outlined),
                 _CategoryChip(label: 'Sport', icon: Icons.fitness_center),

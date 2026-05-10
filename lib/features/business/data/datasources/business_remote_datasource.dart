@@ -17,7 +17,7 @@ class BusinessRemoteDatasource {
   final FirebaseFunctions _functions;
 
   Stream<List<Business>> watchActiveBusinesses({String? city}) {
-    Query<Map<String, dynamic>> query = _firestore
+    var query = _firestore
         .collection('tenants')
         .where('isActive', isEqualTo: true)
         .orderBy('rating', descending: true);

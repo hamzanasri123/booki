@@ -8,7 +8,7 @@ class ServicesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final services = const [
+    const services = [
       ('Coupe homme', '30 min', '25 DT'),
       ('Barbe', '20 min', '15 DT'),
       ('Coupe + barbe', '45 min', '40 DT'),

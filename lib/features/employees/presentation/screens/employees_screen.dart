@@ -8,7 +8,7 @@ class EmployeesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final employees = const [
+    const employees = [
       ('Sami', 'Coupe homme, Barbe'),
       ('Karim', 'Coupe + barbe'),
     ];

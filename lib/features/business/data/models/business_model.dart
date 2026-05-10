@@ -19,12 +19,6 @@ class BusinessModel extends Business {
     this.photos = const [],
   });
 
-  final String ownerId;
-  final String phone;
-  final bool isActive;
-  final String subscriptionPlan;
-  final List<String> photos;
-
   factory BusinessModel.fromFirestore(
     DocumentSnapshot<Map<String, dynamic>> doc,
   ) {
@@ -46,4 +40,10 @@ class BusinessModel extends Business {
       services: const [],
     );
   }
+
+  final String ownerId;
+  final String phone;
+  final bool isActive;
+  final String subscriptionPlan;
+  final List<String> photos;
 }

@@ -7,7 +7,7 @@ class SubscriptionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final plans = const [
+    const plans = [
       ('Starter', '29 DT/mois', '1 employé • 50 réservations'),
       ('Pro', '79 DT/mois', 'Employés multiples • illimité'),
       ('Premium', '149 DT/mois', 'IA • promotions • multi-branches'),

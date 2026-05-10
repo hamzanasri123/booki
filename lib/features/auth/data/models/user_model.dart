@@ -15,9 +15,6 @@ class UserModel extends AppUser {
     this.updatedAt,
   });
 
-  final DateTime? createdAt;
-  final DateTime? updatedAt;
-
   factory UserModel.fromFirestore(DocumentSnapshot<Map<String, dynamic>> doc) {
     final data = doc.data() ?? <String, dynamic>{};
 
@@ -42,10 +39,13 @@ class UserModel extends AppUser {
       'role': role.name,
       'tenantId': tenantId,
       'photoUrl': photoUrl,
-      'createdAt': createdAt == null ? FieldValue.serverTimestamp() : createdAt,
+      'createdAt': createdAt ?? FieldValue.serverTimestamp(),
       'updatedAt': FieldValue.serverTimestamp(),
     };
   }
+
+  final DateTime? createdAt;
+  final DateTime? updatedAt;
 
   static UserRole _roleFromString(String? value) {
     return UserRole.values.firstWhere(

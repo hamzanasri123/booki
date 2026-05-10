@@ -19,11 +19,6 @@ class AppointmentModel extends Appointment {
     required this.paymentStatus,
   });
 
-  final String clientId;
-  final String serviceId;
-  final String employeeId;
-  final String paymentStatus;
-
   factory AppointmentModel.fromFirestore(
     DocumentSnapshot<Map<String, dynamic>> doc,
   ) {
@@ -45,6 +40,11 @@ class AppointmentModel extends Appointment {
       paymentStatus: data['paymentStatus'] as String? ?? 'unpaid',
     );
   }
+
+  final String clientId;
+  final String serviceId;
+  final String employeeId;
+  final String paymentStatus;
 
   static AppointmentStatus _statusFromString(String? value) {
     return AppointmentStatus.values.firstWhere(

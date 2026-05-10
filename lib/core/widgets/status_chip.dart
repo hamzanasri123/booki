@@ -9,16 +9,16 @@ class StatusChip extends StatelessWidget {
     super.key,
   });
 
-  final String label;
-  final Color color;
-
   factory StatusChip.pending() {
     return const StatusChip(label: 'En attente', color: AppColors.warning);
   }
 
   factory StatusChip.confirmed() {
-    return const StatusChip(label: 'Confirmé', color: AppColors.success);
+    return const StatusChip(label: 'Confirme', color: AppColors.success);
   }
+
+  final String label;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
