@@ -7,10 +7,18 @@ Sprint 0 uses static demo data so the app can be designed before Firebase is con
 1. Install FlutterFire CLI and configure the project.
 2. Generate `lib/firebase_options.dart`.
 3. Initialize Firebase in `lib/app/bootstrap.dart`.
-4. Replace `AuthController` demo login methods with Firebase Auth calls.
-5. Create `users/{uid}` profiles after registration.
+4. Wire login/register screens to the auth use cases.
+5. Replace `AuthController` demo login methods with Firebase Auth state.
 6. Add role-based routing from the Firestore user profile.
-7. Move booking creation and appointment status updates behind Cloud Functions.
+7. Connect business setup to the `createBusiness` Cloud Function.
+8. Connect booking confirmation to the `createAppointment` Cloud Function.
+
+## Code Already Prepared
+
+- `AuthRepository` with Firebase Auth and Firestore profile datasource.
+- `BusinessRepository` with Firestore tenant reads and `createBusiness`.
+- `BookingRepository` with appointment streams and status updates.
+- Riverpod providers for repositories and use cases.
 
 ## Collections
 
